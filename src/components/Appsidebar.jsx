@@ -24,53 +24,19 @@ const menuItems = {
             badge: null,
         },
         {
-            title: "Inbox",
-            url: "/inbox",
+            title: "Income",
+            url: "/income",
             icon: Inbox,
             badge: "12",
         },
         {
-            title: "Calendar",
-            url: "/calendar",
+            title: "Expense",
+            url: "/expense",
             icon: Calendar,
             badge: "3",
         },
     ],
-    features: [
-        {
-            title: "Search",
-            url: "/search",
-            icon: Search,
-        },
-        {
-            title: "Notifications",
-            url: "/notifications",
-            icon: Bell,
-            badge: "New",
-        },
-        {
-            title: "Bookmarks",
-            url: "/bookmarks",
-            icon: BookOpen,
-        },
-    ],
-    settings: [
-        {
-            title: "Team",
-            url: "/team",
-            icon: Users,
-        },
-        {
-            title: "Favorites",
-            url: "/favorites",
-            icon: Star,
-        },
-        {
-            title: "Settings",
-            url: "/settings",
-            icon: Settings,
-        },
-    ],
+
 }
 
 export const AppSidebar = () => {
@@ -152,35 +118,9 @@ export const AppSidebar = () => {
                     </SidebarGroupContent>
                 </SidebarGroup>
 
-                <SidebarGroup>
-                    <SidebarGroupLabel
-                        className={cn("px-3 text-xs font-medium text-gray-500", isCollapsed && "sr-only")}
-                    >
-                        Features
-                    </SidebarGroupLabel>
-                    <SidebarGroupContent>
-                        <SidebarMenu>
-                            {menuItems.features.map((item) => (
-                                <MenuItem key={item.title} item={item} />
-                            ))}
-                        </SidebarMenu>
-                    </SidebarGroupContent>
-                </SidebarGroup>
 
-                <SidebarGroup>
-                    <SidebarGroupLabel
-                        className={cn("px-3 text-xs font-medium text-gray-500", isCollapsed && "sr-only")}
-                    >
-                        Settings
-                    </SidebarGroupLabel>
-                    <SidebarGroupContent>
-                        <SidebarMenu>
-                            {menuItems.settings.map((item) => (
-                                <MenuItem key={item.title} item={item} />
-                            ))}
-                        </SidebarMenu>
-                    </SidebarGroupContent>
-                </SidebarGroup>
+
+
             </SidebarContent>
         </Sidebar>
     )
